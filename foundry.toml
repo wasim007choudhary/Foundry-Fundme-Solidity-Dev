@@ -1,4 +1,5 @@
 [profile.default]
+solc_vesion = "^0.8.19"
 src = "src"
 out = "out"
 libs = ["lib"]

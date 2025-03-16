@@ -58,9 +58,7 @@ contract FundmeTest is Test {
 
     function testOnlyOwner() public funded {
         vm.prank(USER);
-        vm.expectRevert(
-            abi.encodeWithSelector(bytes4(keccak256("Not_Owner()")))
-        );
+        vm.expectRevert(abi.encodeWithSelector(bytes4(keccak256("Not_Owner()"))));
 
         fundMe.withdrawFund();
     }
@@ -83,10 +81,7 @@ contract FundmeTest is Test {
         //assert
         uint256 endingOwnerBalance = fundMe.getOwner().balance;
         uint256 endingFundmeBalance = address(fundMe).balance;
-        assertEq(
-            startingFundmeBalance + startingOwnerBalance,
-            endingOwnerBalance
-        );
+        assertEq(startingFundmeBalance + startingOwnerBalance, endingOwnerBalance);
         assertEq(endingFundmeBalance, 0);
     }
 
@@ -116,10 +111,7 @@ contract FundmeTest is Test {
         //assert
         //uint256 endingOwnerBalance = fundMe.getOwner().balance;
         //uint256 endingFundmeBalance = address(fundMe).balance;
-        assert(
-            startingFundmeBalance + startingOwnerBalance ==
-                fundMe.getOwner().balance
-        );
+        assert(startingFundmeBalance + startingOwnerBalance == fundMe.getOwner().balance);
         assert(address(fundMe).balance == 0);
     }
 
@@ -149,10 +141,7 @@ contract FundmeTest is Test {
         //assert
         //uint256 endingOwnerBalance = fundMe.getOwner().balance;
         //uint256 endingFundmeBalance = address(fundMe).balance;
-        assert(
-            startingFundmeBalance + startingOwnerBalance ==
-                fundMe.getOwner().balance
-        );
+        assert(startingFundmeBalance + startingOwnerBalance == fundMe.getOwner().balance);
         assert(address(fundMe).balance == 0);
     }
 }
