@@ -1,68 +1,30 @@
-## Foundry
+##📝 Overview:
+Fundme is a decentralized crowdfunding smart contract that allows users to contribute ETH while ensuring a minimum USD-equivalent funding requirement using Chainlink’s AggregatorV3Interface for ETH/USD price conversion.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project is built and tested using Foundry, an ultra-fast Solidity development framework.
 
-Foundry consists of:
+##🚀 Features:
+✅ Accepts ETH contributions with a minimum USD threshold
+✅ Uses Chainlink Price Feeds to convert ETH to USD
+✅ Owner-controlled withdrawal function to collect funds
+✅ Built and tested with Foundry for security & efficiency
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+## 🛠 Installation & Setup
+##1️⃣ Clone the Repository:
+```
+git clone https://github.com/wasim007choudhary/Fundme-Foundry.git
+cd Fundme-Foundry
+```
+##2️⃣ Install Foundry (if not installed)
+```
+foundryup
+```
+```
+forge install
 ```
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-# 007wasim
-# Fundme-Solidity-Dev
+##🔗 Chainlink Price Feed Addresses
+Network	ETH/USD Aggregator Address
+Ethereum Mainnet	0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419
+Goerli Testnet	0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e
+Sepolia Testnet	0x694AA1769357215DE4FAC081bf1f309aDC325306
